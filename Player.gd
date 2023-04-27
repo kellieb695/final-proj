@@ -17,7 +17,7 @@ func _physics_process(delta):
 		direction.z += 1
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= 1
-		
+	
 		
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
