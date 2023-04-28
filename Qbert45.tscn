@@ -1,19 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Qbert.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraTilt.gd" type="Script" id=2]
+[ext_resource path="res://Qbertcomposition6.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 40, 40, 1 )
+[sub_resource type="GDScript" id=1]
+script/source = "extends Spatial
 
-[sub_resource type="CubeMesh" id=2]
-size = Vector3( 80, 80, 2 )
+"
 
 [node name="Main" type="Spatial"]
 
 [node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 1.5 )
@@ -26,16 +24,9 @@ script = ExtResource( 2 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 3.09086e-08, 0.707107, 0.707107, 1, -4.37114e-08, 3.55271e-15, 3.09086e-08, 0.707107, -0.707107, -77, 15, 87 )
 
-[node name="Main" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573576, 0.409582, -0.815162, 0.409576, 0, -2.16247, -5 )
-
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573576, 0.409583, -0.815162, 0.409576, 0.05, 3, 0.395291 )
+transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573576, 0.409583, -0.815162, 0.409576, 0.0430784, 4.73203, 0.399288 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
-shape = SubResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
-mesh = SubResource( 2 )
+[node name="Main2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573577, 0.409583, -0.815162, 0.409576, 0, 2.162, -3.25 )
+script = SubResource( 1 )
