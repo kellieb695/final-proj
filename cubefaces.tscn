@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://cubefaces.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 0, 2, 2 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1, 1, 0 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0, 1, 0.00784314, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+size = Vector3( 2, 2, 0 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0, 0, 1, 1 )
+
+[sub_resource type="CubeMesh" id=11]
+size = Vector3( 2, 0, 2 )
+
+[node name="Level" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="LeftFaceBody" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="LeftFace" type="CollisionShape" parent="LeftFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="LeftFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+material_override = SubResource( 5 )
+mesh = SubResource( 6 )
+skeleton = NodePath("../LeftFace")
+
+[node name="RightFaceBody" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="RightFace" type="CollisionShape" parent="RightFaceBody"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RightFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+material_override = SubResource( 8 )
+mesh = SubResource( 9 )
+skeleton = NodePath("../RightFace")
+
+[node name="TopFaceBody" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="TopFace" type="CollisionShape" parent="TopFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="TopFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+material_override = SubResource( 10 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../TopFace")

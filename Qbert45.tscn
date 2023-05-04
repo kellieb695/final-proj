@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://flatqbert6.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraTilt.gd" type="Script" id=2]
 [ext_resource path="res://Qbertcomposition6.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://flatqbert6.gd" type="Script" id=5]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Spatial
-
 "
 
 [node name="Main" type="Spatial"]
@@ -25,8 +26,12 @@ script = ExtResource( 2 )
 transform = Transform( 3.09086e-08, 0.707107, 0.707107, 1, -4.37114e-08, 3.55271e-15, 3.09086e-08, 0.707107, -0.707107, -77, 15, 87 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573576, 0.409583, -0.815162, 0.409576, 0.0430784, 4.73203, 0.399288 )
+transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573576, 0.409583, -0.815162, 0.409576, 0.00844896, 13.4035, -4.47969 )
 
-[node name="Main2" parent="." instance=ExtResource( 3 )]
+[node name="qbert6" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573577, 0.409583, -0.815162, 0.409576, 0, 2.162, -3.25 )
+visible = false
 script = SubResource( 1 )
+
+[node name="flatqbert6" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 5 )

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3rowBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stair.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Block.tscn" type="PackedScene" id=3]
 [ext_resource path="res://triBlock.tscn" type="PackedScene" id=4]
 
@@ -41,3 +42,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -8, 9 )
 
 [node name="Block6" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -8, 13 )
+
+[node name="Stair" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 5, 0, 3 )
+
+[node name="Stair2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, -2, 5 )
+
+[node name="Stair3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9, -3, 2 )
