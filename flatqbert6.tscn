@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Qbertcomposition6.tscn" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Main" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.704796, -0.0023109, -0.709406, 0.579228, 0.579228, 0.573577, 0.409583, -0.815162, 0.409576, -0.00462176, 3.32046, -4.88032 )
