@@ -1,6 +1,4 @@
-[gd_scene load_steps=11 format=2]
-
-[ext_resource path="res://cubefaces.gd" type="Script" id=1]
+[gd_scene load_steps=10 format=2]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0, 1, 1 )
@@ -30,11 +28,8 @@ albedo_color = Color( 0, 0, 1, 1 )
 size = Vector3( 2, 0, 2 )
 
 [node name="Level" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-script = ExtResource( 1 )
 
 [node name="LeftFaceBody" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="LeftFace" type="CollisionShape" parent="LeftFaceBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
@@ -47,7 +42,6 @@ mesh = SubResource( 6 )
 skeleton = NodePath("../LeftFace")
 
 [node name="RightFaceBody" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="RightFace" type="CollisionShape" parent="RightFaceBody"]
 shape = SubResource( 7 )
@@ -59,7 +53,6 @@ mesh = SubResource( 9 )
 skeleton = NodePath("../RightFace")
 
 [node name="TopFaceBody" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="TopFace" type="CollisionShape" parent="TopFaceBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
