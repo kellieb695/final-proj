@@ -29,7 +29,6 @@ size = Vector3( 2, 0, 2 )
 
 [node name="Level" type="Spatial"]
 
-
 [node name="LeftFaceBody" type="KinematicBody" parent="."]
 
 [node name="LeftFace" type="CollisionShape" parent="LeftFaceBody"]

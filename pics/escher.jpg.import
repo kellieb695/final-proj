@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/escher.jpg-26368373372ccb13a71ec2dd9316154a.stex"
+path="res://.import/escher.jpg-e27c006f6ec8234bad4101f954fb87e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escher.jpg"
-dest_files=[ "res://.import/escher.jpg-26368373372ccb13a71ec2dd9316154a.stex" ]
+source_file="res://pics/escher.jpg"
+dest_files=[ "res://.import/escher.jpg-e27c006f6ec8234bad4101f954fb87e1.stex" ]
 
 [params]
 

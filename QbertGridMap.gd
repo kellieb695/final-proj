@@ -1,6 +1,6 @@
 extends GridMap
 
-const Cube = preload("res://cubefaces.tscn")
+const Cube = preload("res://facesScenes/cubefaces.tscn")
 
 
 func _ready():
