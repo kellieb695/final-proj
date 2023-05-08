@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://PlaceholderMeshLib.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://QbertGridMap.gd" type="Script" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PlayerGridMovement.gd" type="Script" id=4]
 
 [node name="QbertLevel" type="Spatial"]
 
@@ -13,10 +15,16 @@ data = {
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, -3, 0 )
+"_editor_floor_": Vector3( 0, 0, 0 )
 }
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 15, 18, 15 )
 projection = 1
 size = 30.0
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, 3 )
+
+[node name="PlayerGridMovement" parent="." instance=ExtResource( 3 )]
+script = ExtResource( 4 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Qbertcomposition6.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelDrafts/Qbertcomposition6.tscn" type="PackedScene" id=1]
 
 [node name="Spatial" type="Spatial"]
 
