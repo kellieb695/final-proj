@@ -12,10 +12,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_released("flip_world_cw"):
-		rotation_degrees.y += 90
-		rotation_degrees.z += 90
-	if Input.is_action_just_released("flip_world_ccw"):
-		rotation_degrees.x += 90
-		rotation_degrees.z += 90
+#func _process(delta):
+#	if Input.is_action_just_released("flip_world_cw"):
+#		rotation_degrees.y += 90
+#		rotation_degrees.z += 90
+#
+#	if Input.is_action_just_released("flip_world_ccw"):
+#		rotation_degrees.x += 90
+#		rotation_degrees.z += 90

@@ -30,5 +30,11 @@ func newObject(cell: Vector3, cellPos: Vector3, inst):
 	return newInst
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_just_released("flip_world_cw"):
+		var facing_vector = Vector3(1,1,1).normalized()
+		transform.basis = transform.basis.rotated(facing_vector, 2 * PI / 3)
+		
+	if Input.is_action_just_released("flip_world_ccw"):
+		var facing_vector = Vector3(1,1,1).normalized()
+		transform.basis = transform.basis.rotated(facing_vector, -2 * PI / 3)
