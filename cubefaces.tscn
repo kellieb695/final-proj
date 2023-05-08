@@ -29,6 +29,7 @@ size = Vector3( 2, 0, 2 )
 
 [node name="Level" type="Spatial"]
 
+
 [node name="LeftFaceBody" type="KinematicBody" parent="."]
 
 [node name="LeftFace" type="CollisionShape" parent="LeftFaceBody"]
@@ -44,6 +45,7 @@ skeleton = NodePath("../LeftFace")
 [node name="RightFaceBody" type="KinematicBody" parent="."]
 
 [node name="RightFace" type="CollisionShape" parent="RightFaceBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RightFaceBody"]
