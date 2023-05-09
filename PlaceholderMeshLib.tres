@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=5 format=2]
+[gd_resource type="MeshLibrary" load_steps=6 format=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -10,6 +10,9 @@ size = Vector3( 2, 4, 1 )
 
 [sub_resource type="CubeMesh" id=4]
 size = Vector3( 2, 1, 4 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 1, 1, 1 )
 
 [resource]
 item/0/name = ""
@@ -32,6 +35,11 @@ item/3/mesh = SubResource( 4 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [  ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/4/name = ""
+item/4/mesh = SubResource( 5 )
+item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/4/shapes = [  ]
+item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 __meta__ = {
 "_editor_source_scene": "res://facesScenes/stairfaces2.tscn"
 }

@@ -9,10 +9,12 @@ const Stair3 = preload("res://facesScenes/stairfaces4.tscn")
 
 func _ready():
 	var cubes = get_used_cells_by_id(0)
+	var player = get_used_cells_by_id(4)
 	var stair1 = get_used_cells_by_id(1)
 	var stair2 = get_used_cells_by_id(2)
 	var stair3 = get_used_cells_by_id(3)
 	basicTileReplace(cubes, Cube)
+	basicTileReplace(player, Player)
 	basicTileReplace(stair1, Stair1)
 	basicTileReplace(stair2, Stair2)
 	basicTileReplace(stair3, Stair3)
