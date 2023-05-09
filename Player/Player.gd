@@ -1,8 +1,8 @@
 extends KinematicBody
 
 export var speed = 120.0
-#export var jump_impulse = 2.0
-export var fall_acceleration = 100.0
+export var jump_impulse = 2.0
+export var fall_acceleration = 50.0
 
 
 var velocity = Vector3.ZERO
@@ -10,14 +10,7 @@ var velocity = Vector3.ZERO
 func _physics_process(delta):
 	var direction = Vector3.ZERO
 	
-	if Input.is_action_just_released("flip_world_cw"):
-		var facing_vector = Vector3(1,1,1).normalized()
-		transform.basis = transform.basis.rotated(facing_vector, 2 * PI / 3)
-		
-	if Input.is_action_just_released("flip_world_ccw"):
-		var facing_vector = Vector3(1,1,1).normalized()
-		transform.basis = transform.basis.rotated(facing_vector, -2 * PI / 3)
-		
+	
 	if Input.is_action_just_released("move_right"):
 		direction.x += 1
 	if Input.is_action_just_released("move_left"):
@@ -32,8 +25,8 @@ func _physics_process(delta):
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
 	
-	#if is_on_floor() and Input.is_action_just_released("jump"):
-		#velocity.y += jump_impulse
+	if is_on_floor() and Input.is_action_just_released("jump"):
+		velocity.y += jump_impulse
 		
 	
 	velocity.y -= fall_acceleration * delta

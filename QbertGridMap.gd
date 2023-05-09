@@ -1,11 +1,15 @@
 extends GridMap
 
 const Cube = preload("res://facesScenes/cubefaces.tscn")
+const Player = preload("res://player/Player.tscn")
+const Stair = preload("res://facesScenes/stairfaces.tscn")
 
 
 func _ready():
 	var cubes = get_used_cells_by_id(0)
+	var stair = get_used_cells_by_id(1)
 	basicTileReplace(cubes, Cube)
+	basicTileReplace(stair, Stair)
 
 
 func get_used_cells_by_id(id: int):
