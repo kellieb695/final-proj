@@ -18,6 +18,8 @@ func _ready():
 	basicTileReplace(stair1, Stair1)
 	basicTileReplace(stair2, Stair2)
 	basicTileReplace(stair3, Stair3)
+	
+	
 
 
 func get_used_cells_by_id(id: int):
@@ -50,3 +52,6 @@ func _process(delta):
 	if Input.is_action_just_released("flip_world_ccw"):
 		var facing_vector = Vector3(1,1,1).normalized()
 		transform.basis = transform.basis.rotated(facing_vector, -2 * PI / 3)
+		
+	if Input.is_action_just_released("restart"):
+		get_tree().reload_current_scene()
