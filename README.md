@@ -2,4 +2,4 @@
 
 ### This is a work in progress
 
-![Game inspo art by M.C. Escher](escher.jpg)
+![Game inspo art by M.C. Escher](pics/escher.jpg)
