@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Final-proj"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://QbertLevel.tscn"
 config/icon="res://pics/icon.png"
 
 [gui]
