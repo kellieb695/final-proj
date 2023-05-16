@@ -1,21 +1,24 @@
 extends KinematicBody
 
-export var speed = 10.0
+export var speed = 120.0
 export var jump_impulse = 2.0
-export var fall_acceleration = 1.0
+export var fall_acceleration = 50.0
+
 
 var velocity = Vector3.ZERO
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
-	if Input.is_action_pressed("move_right"):
+	
+	
+	if Input.is_action_just_released("move_right"):
 		direction.x += 1
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_just_released("move_left"):
 		direction.x -= 1
 		
-	if Input.is_action_pressed("move_back"):
+	if Input.is_action_just_released("move_back"):
 		direction.z += 1
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_just_released("move_forward"):
 		direction.z -= 1
 	
 		
