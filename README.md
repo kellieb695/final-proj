@@ -2,6 +2,7 @@
 
 ### [This](https://kellieb695.github.io/final-proj/) is a work in progress!
 
+![Game Screenshot](pics/game-screenshot.png)
 Description:
 Navigate an Escherian platform
 
