@@ -2,22 +2,36 @@ extends GridMap
 
 const Cube = preload("res://facesScenes/cubefaces.tscn")
 const Player = preload("res://player/Player.tscn")
-const Stair1 = preload("res://facesScenes/stairfaces.tscn")
-const Stair2 = preload("res://facesScenes/stairfaces2.tscn")
-const StairD = preload("res://facesScenes/stairfaces4.tscn")
+
+const StairB = preload("res://facesScenes/stairfacesB.tscn")
+const StairA = preload("res://facesScenes/stairfacesA.tscn")
+const StairD = preload("res://facesScenes/stairfacesD.tscn")
+const StairC = preload("res://facesScenes/stairfacesC.tscn")
+const StairE = preload("res://facesScenes/stairfacesE.tscn")
+const StairF = preload("res://facesScenes/stairfacesF.tscn")
+
 
 
 func _ready():
 	var cubes = get_used_cells_by_id(0)
 	var player = get_used_cells_by_id(4)
-	var stair1 = get_used_cells_by_id(1)
-	var stair2 = get_used_cells_by_id(2)
+	
+	var stairB = get_used_cells_by_id(1)
+	var stairA = get_used_cells_by_id(2)
 	var stairD = get_used_cells_by_id(3)
+	var stairC = get_used_cells_by_id(5)
+	var stairE = get_used_cells_by_id(6)
+	var stairF = get_used_cells_by_id(7)
+	
 	basicTileReplace(cubes, Cube)
 	playerTileReplace(player, Player)
-	basicTileReplace(stair1, Stair1)
-	basicTileReplace(stair2, Stair2)
+	
+	basicTileReplace(stairB, StairB)
+	basicTileReplace(stairA, StairA)
 	basicTileReplace(stairD, StairD)
+	basicTileReplace(stairC, StairC)
+	basicTileReplace(stairE, StairE)
+	basicTileReplace(stairF, StairF)
 	
 
 

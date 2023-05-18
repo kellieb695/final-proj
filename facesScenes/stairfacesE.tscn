@@ -45,6 +45,7 @@ size = Vector3( 0.5, 0.8, 0 )
 albedo_color = Color( 0.054902, 0, 1, 1 )
 
 [node name="Spatial" type="Spatial"]
+transform = Transform( -1, -1.50996e-07, -6.60024e-15, 0, -4.37114e-08, 1, -1.50996e-07, 1, 4.37114e-08, 0, 0, 0 )
 
 [node name="vert1" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.6, 0 )
@@ -127,29 +128,58 @@ shape = SubResource( 4 )
 [node name="MeshInstance" type="MeshInstance" parent="hor4"]
 mesh = SubResource( 6 )
 
-[node name="Spatial" type="KinematicBody" parent="."]
+[node name="wall1" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="Spatial"]
-depth = 2.0
+[node name="CollisionPolygon" type="CollisionPolygon" parent="wall1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+depth = 0.0
 polygon = PoolVector2Array( -1, -0.8, 1, -0.8, 1, 0, 0.5, 0, 0.5, 0.8, 0, 0.8, 0, 1.6, -0.5, 1.6, -0.5, 2.4, -1, 2.4 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Spatial"]
+[node name="MeshInstance" type="MeshInstance" parent="wall1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 1 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 11 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="Spatial"]
+[node name="MeshInstance2" type="MeshInstance" parent="wall1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.4, 1 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 12 )
 
-[node name="MeshInstance3" type="MeshInstance" parent="Spatial"]
+[node name="MeshInstance3" type="MeshInstance" parent="wall1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, 1 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 13 )
 
-[node name="MeshInstance4" type="MeshInstance" parent="Spatial"]
+[node name="MeshInstance4" type="MeshInstance" parent="wall1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 2, 1 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 14 )
+
+[node name="wall2" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, -2 )
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+depth = 0.0
+polygon = PoolVector2Array( -1, -0.8, 1, -0.8, 1, 0, 0.5, 0, 0.5, 0.8, 0, 0.8, 0, 1.6, -0.5, 1.6, -0.5, 2.4, -1, 2.4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 1 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 11 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.4, 1 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 12 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, 1 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 13 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="wall2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 2, 1 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 14 )

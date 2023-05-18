@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=6 format=2]
+[gd_resource type="MeshLibrary" load_steps=9 format=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -9,10 +9,19 @@ size = Vector3( 1, 4, 2 )
 size = Vector3( 2, 4, 1 )
 
 [sub_resource type="CubeMesh" id=4]
-size = Vector3( 2, 1, 4 )
+size = Vector3( 1, 2, 4 )
 
 [sub_resource type="CubeMesh" id=5]
 size = Vector3( 1, 1, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 2, 1, 4 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 4, 2, 1 )
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 4, 1, 2 )
 
 [resource]
 item/0/name = ""
@@ -40,6 +49,21 @@ item/4/mesh = SubResource( 5 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/shapes = [  ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/5/name = ""
+item/5/mesh = SubResource( 6 )
+item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/5/shapes = [  ]
+item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/6/name = ""
+item/6/mesh = SubResource( 7 )
+item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/6/shapes = [  ]
+item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/7/name = ""
+item/7/mesh = SubResource( 8 )
+item/7/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/7/shapes = [  ]
+item/7/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 __meta__ = {
 "_editor_source_scene": "res://facesScenes/stairfaces2.tscn"
 }
