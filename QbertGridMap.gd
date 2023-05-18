@@ -10,9 +10,11 @@ const StairC = preload("res://facesScenes/stairfacesC.tscn")
 const StairE = preload("res://facesScenes/stairfacesE.tscn")
 const StairF = preload("res://facesScenes/stairfacesF.tscn")
 
-
+var OGgridmap = self
 
 func _ready():
+	
+
 	var cubes = get_used_cells_by_id(0)
 	var player = get_used_cells_by_id(4)
 	
@@ -22,6 +24,8 @@ func _ready():
 	var stairC = get_used_cells_by_id(5)
 	var stairE = get_used_cells_by_id(6)
 	var stairF = get_used_cells_by_id(7)
+	
+	print(cubes)
 	
 	basicTileReplace(cubes, Cube)
 	playerTileReplace(player, Player)
@@ -47,7 +51,7 @@ func playerTileReplace(cellArr: Array, inst):
 	var cellPos = Vector3()
 	for i in cellArr:
 		var newObject = newObject(i, cellPos, inst)
-		newObject.gridMapAroundMe = self
+		newObject.myGridMap = OGgridmap
 
 func basicTileReplace(cellArr: Array, inst):
 	var cellPos = Vector3()
