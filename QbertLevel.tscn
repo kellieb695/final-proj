@@ -27,5 +27,5 @@ data = {
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 5, 0 )
+"_editor_floor_": Vector3( 0, 4, 0 )
 }

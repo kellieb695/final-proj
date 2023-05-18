@@ -4,7 +4,7 @@ const Cube = preload("res://facesScenes/cubefaces.tscn")
 const Player = preload("res://player/Player.tscn")
 const Stair1 = preload("res://facesScenes/stairfaces.tscn")
 const Stair2 = preload("res://facesScenes/stairfaces2.tscn")
-const Stair3 = preload("res://facesScenes/stairfaces4.tscn")
+const StairD = preload("res://facesScenes/stairfaces4.tscn")
 
 
 func _ready():
@@ -12,13 +12,12 @@ func _ready():
 	var player = get_used_cells_by_id(4)
 	var stair1 = get_used_cells_by_id(1)
 	var stair2 = get_used_cells_by_id(2)
-	var stair3 = get_used_cells_by_id(3)
+	var stairD = get_used_cells_by_id(3)
 	basicTileReplace(cubes, Cube)
-	basicTileReplace(player, Player)
+	playerTileReplace(player, Player)
 	basicTileReplace(stair1, Stair1)
 	basicTileReplace(stair2, Stair2)
-	basicTileReplace(stair3, Stair3)
-	
+	basicTileReplace(stairD, StairD)
 	
 
 
@@ -30,6 +29,12 @@ func get_used_cells_by_id(id: int):
 			array.append(i)
 	return array
 	
+func playerTileReplace(cellArr: Array, inst):
+	var cellPos = Vector3()
+	for i in cellArr:
+		var newObject = newObject(i, cellPos, inst)
+		newObject.gridMapAroundMe = self
+
 func basicTileReplace(cellArr: Array, inst):
 	var cellPos = Vector3()
 	for i in cellArr:
@@ -43,7 +48,7 @@ func newObject(cell: Vector3, cellPos: Vector3, inst):
 	add_child(newInst)
 	return newInst
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	
 func _process(delta):
 	if Input.is_action_just_released("flip_world_cw"):
 		var facing_vector = Vector3(1,1,1).normalized()
